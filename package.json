@@ -1,0 +1,27 @@
+{
+  "name": "ardeidae",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimeWz667/PatientPathwayTB.git"
+  },
+  "keywords": [
+    "Tuberuclosis",
+    "Patient Pathway"
+  ],
+  "author": "Chu Chang, Ku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimeWz667/PatientPathwayTB/issues"
+  },
+  "homepage": "https://github.com/TimeWz667/PatientPathwayTB#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

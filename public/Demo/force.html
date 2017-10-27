@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Care pathways of TB patients</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/scroller.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+ 
+  <div class="container">
+   <h1>Health care seeking behaviour as a link between tuberculosis and socioeconomic factors</h1>
+    <div id='graphic'>
+      <div id='sections'>
+        <section class="step">
+          <div class="title">Study aim</div>
+
+          Exploring the roles of <b>socioeconomic status(SES)</b> in <b>care-seeking</b> of <b>Tuberculosis(TB)</b> patients and how it affects the epidemiological features in <b>Taiwan</b>.
+          <br><br>
+          <div id="map" style="width:100%;height:300px"></div>
+          <script>
+          function TaiwanMap() {
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+              center: new google.maps.LatLng(23.5, 121.5),
+              zoom: 6,
+              zoomControl: false
+            };
+            var map = new google.maps.Map(mapCanvas ,mapOptions);
+          }
+          </script>
+
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2UH_51q6xQHmKWGXakADbFUFg-vd6y0Q&callback=TaiwanMap"></script>
+        </section>
+
+
+        <section class="step">
+          <div class="title">Field of interest</div>
+          We are studying <b>TB dynamics</b> with linkages of <b>socioeconomic status</b> variables.
+          <br><br>
+          <cl>
+            <li><b>Deteminant:</b> upper stream factors</li>
+            <li><b>Process:</b> underlying behavours, can be conceptual or concrete</li>
+            <li><b>Transition:</b> dynamic features, driven by processes</li>
+            <li><b>State:</b> static features, changed through transitions</li>
+            <li><b>Outcome</b> measurements for evaluation</li>
+          </cl>
+          <b style="color:#FFA277; font-weight: bold; font-size:40px;">&rarr;</b> Determining<br>
+          <b style="color:#4008D4; font-weight: bold; font-size:40px;">&rarr;</b> Flow between states via transition.
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 1: Pathway extraction</div>
+          How to identify <b>care pathways</b> of TB patients from <b>National Health Insurance Research Database (NHIRD)</b>, Taiwan, which is our essential source of care seeking records?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>NHIRD</li>
+              <li>Data management</li>
+              <li>Pathway extraction</li>
+            </ul>
+          </div>
+          See chapter 4.1, 4.2
+        </section>
+
+        <section class="step">
+          <div class="title">Step 2: Covariate analysis</div>
+          What kind of <b>SES factors</b> NHIRD can provide? How is the reliability and the validity?
+          <br><br> What are the <b>correlations</b> between available socioeconomic factors and <b>care seeking</b>?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>SES</li>
+              <li>Covariate analysis</li>
+            </ul>
+            See chapter 4.3, 4.4
+          </div>
+        </section>
+
+        <section class="step">
+          <div class="title">Step 3: Pathway simulation</div>
+          How to simulate <b>individual care pathways</b> based on given statistics?
+          <br><br> How to provide information of <b>infectiousness</b>, <b>recovery</b>, and <b>TB-related death</b> based on the simulation?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>Care pathway simulation</li>
+              <li>Agent-based modelling</li>
+              <li>Behaviour modelling</li>
+            </ul>
+            See chapter 3, 5
+          </div>
+        </section>
+
+        <section class="step">
+          <div class="title">Step 4: TB dynamic simulation</div>
+          How to pass the information of care pathway in individual levels to <b>population level</b> in order to infer overall <b>TB dynamics</b>?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>TB dynamic modelling</li>
+              <li>Hybrid modelling</li>
+            </ul>
+            See chapter 6.1
+          </div>
+        </section>
+
+        <section class="step">
+          <div class="title">Step 5: Calibration</div>
+          What is the <b>stochasticity</b> and the <b>uncertainty</b> of the process?
+          <br><br>Can we reduce the uncertainty through <b>external data</b>?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>Modelling fitting</li>
+              <li>Uncertainty analysis</li>
+            </ul>
+            See chapter 6.2
+          </div>
+        </section>
+
+        <section class="step">
+          <div class="title">Step 6: Policy analysis</div>
+          Can we propose potential <b>interventions</b> on socioeconomic factors to improve efficiency of care pathway?
+
+          <br><br> What is the <b>value</b> of interventions?
+          <br>
+          <div class="kws">
+            <br><b>Keywords</b>
+            <ul>
+              <li>Sensitivity analysis</li>
+              <li>Population attributable fraction, PAF</li>
+              <li>Value of information</li>
+            </ul>
+            See chapter 6.3
+          </div>
+        </section>
+
+
+      </div>
+      <div id='vis-canvas'>
+      </div>
+      <div id="extra-space">
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/d3.js"></script>
+  <script src="js/scroller.js"></script>
+  <script src="js/concept.js"></script>
+  <!-- <script src="js/sections.js"></script> -->
+</body>
+
+</html>

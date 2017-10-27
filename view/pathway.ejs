@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Care pathways of TB patients</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/scroller.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id='graphic'>
+      <div id='sections'>
+        <section class="step">
+          <div class="title">Input</div>
+          In the beginning, the data are records
+        </section>
+
+        <section class="step">
+          <div class="title">Output</div>
+          The targeted output are care pathways.
+        </section>
+
+        <section class="step">
+          <div class="title">Step 1-1: Leballing</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 1-2: Mapping to subfields</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 2-1: Extending time-out</div>
+          The events happen at certain time points but the affects are hold more than those points. It is a waiting time for the next revalent event while implementing the step. Long time-out introduces irrevalent events; short time-out causes fragmentation.
+        </section>
+
+        <section class="step">
+          <div class="title">Step 2-2: Constructing sub-episodes</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 2-3: Aligning episodes</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 2-4: Finding cut points</div>
+
+        </section>
+       
+        <section class="step">
+          <div class="title">Step 2-5: Removing noises</div>
+
+        </section>
+        
+        <section class="step">
+          <div class="title">Step 2-6: Extracting a pathway</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 3-1: Identifying critical timings</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 3-2: Labelling stages</div>
+
+        </section>
+
+        <section class="step">
+          <div class="title">Step 3-3: Summarising</div>
+
+        </section>
+
+      </div>
+      <div id="vis-canvas">
+      </div>
+      <div id="extra-space">
+      </div>
+    </div>
+  </div>
+
+
+  <script src="lib/d3.js"></script>
+  <script src="js/scroller.js"></script>
+  <script src="js/pathwaydata.js"></script>
+  <script src="js/pathwayform.js"></script>
+  <script>
+  window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+  </script>
+</body>
+
+</html>

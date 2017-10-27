@@ -1,0 +1,23 @@
+[
+    {"Name": "Age Sex Loc", "Level": "Determinant", "Parents":[]},
+    {"Name": "SES", "Level": "Determinant", "Parents":[]},
+    {"Name": "Transmission", "Level": "Process", "Parents": ["Age Sex Loc", "Active TB"]},
+    {"Name": "Patient Delay", "Level": "Process", "Parents": ["Age Sex Loc", "SES"]},
+    {"Name": "System Delay", "Level": "Process", "Parents": ["Age Sex Loc", "SES"]},
+    {"Name": "Treatment", "Level": "Process", "Parents": ["Age Sex Loc", "SES"]},
+    {"Name": "Infection", "Level": "Transition", "Parents": ["Transmission"], "In": "Susceptible"},
+    {"Name": "Activation", "Level": "Transition", "Parents": [], "In": "Latent"},
+    {"Name": "Recovery", "Level": "Transition", "Parents": ["Patient Delay", "System Delay", "Treatment"], "In": "Active TB"},
+    {"Name": "TB Death", "Level": "Transition", "Parents": ["Patient Delay", "System Delay", "Treatment"], "In": "Active TB"},
+    {"Name": "Susceptible", "Level": "State", "Parents": []},
+    {"Name": "Latent", "Level": "State", "Parents": [], "In": "Infection"},
+    {"Name": "Active TB", "Level": "State", "Parents": [], "In": "Activation"},
+    {"Name": "Recovered", "Level": "State", "Parents": [], "In": "Recovery"},
+    {"Name": "Dead", "Level": "State", "Parents": [], "In": "TB Death"},
+    {"Name": "Prevalence", "Level": "Outcome", "Parents": ["Active TB"]},
+    {"Name": "Incidence", "Level": "Outcome", "Parents": ["Activation"]},
+    {"Name": "Mortality", "Level": "Outcome", "Parents": ["TB Death"]},
+    {"Name": "QOL", "Level": "Outcome", "Parents": ["Active TB", "Dead"]},
+    {"Name": "Care Seeking", "Level": "Process", "Parents": ["SES"]},
+    {"Name": "TB Dynamics", "Level": "Outcome", "Parents": ["Care Seeking"]}
+]
